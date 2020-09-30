@@ -1,8 +1,12 @@
 # 💡 Sobre o projeto
 
-Clone da página de perfil do GitHub.
+Clone da página de perfil do GitHub com tema light e dark que pode ser alterado clicando na logo.
 
 **Link da demo**: https://clone-github-viniciusmazon.netlify.app/
+
+**Vídeo da demo**: 
+
+[![demo github clone](readme/demo-thumb.png)](https://youtu.be/lT02yxIHn_0 "demo github clone")
 
 
 Desenvolvido seguindo a aula  [Recriando interface do Github com ReactJS | UI Clone](https://www.youtube.com/watch?v=iLEbGQXsg3k&list=WL&index=5), créditos a [Rocketseat 🚀](https://github.com/Rocketseat)
