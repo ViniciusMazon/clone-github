@@ -1,11 +1,21 @@
 import React, { useState } from 'react';
+import { ThemeName } from '../../styles/themes';
 import { useNavigate } from 'react-router-dom';
 
 import { Container, GithubLogo, SearchForm } from './styles';
 
-const Header: React.FC = () => {
+interface Props {
+  themeName: ThemeName;
+  setThemeName: (newName: ThemeName) => void;
+}
+
+const Header: React.FC<Props> = ({ themeName, setThemeName }) => {
   const navigate = useNavigate();
   const [search, setSearch] = useState('');
+
+  function toggleTheme() {
+    setThemeName(themeName === 'light' ? 'dark' : 'light');
+  }
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -14,7 +24,7 @@ const Header: React.FC = () => {
 
   return (
     <Container>
-      <GithubLogo />
+      <GithubLogo onClick={toggleTheme} />
       <SearchForm onSubmit={handleSubmit}>
         <input
           placeholder="Enter Username or Repo..."
